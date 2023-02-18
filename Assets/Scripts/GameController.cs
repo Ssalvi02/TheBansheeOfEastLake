@@ -17,7 +17,8 @@ public class GameController : MonoBehaviour
     {
         if (dir == adir)
         {
-            SceneManager.LoadScene("Town");
+            Debug.Log("Muda");
+            SceneManager.LoadScene(1);
         }
     }
 
