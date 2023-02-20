@@ -8,6 +8,19 @@ public class GameController : MonoBehaviour
 {
     public PlayableDirector dir;
 
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    private void Update()
+    {
+        if (Input.anyKey)
+        {
+            SceneManager.LoadScene("Town");
+        }
+    }
+
     void OnEnable()
     {
         dir.stopped += OnPlayableDirectorStopped;
@@ -18,7 +31,7 @@ public class GameController : MonoBehaviour
         if (dir == adir)
         {
             Debug.Log("Muda");
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene("Town");
         }
     }
 
